@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cab Booking System</title>
+  <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+<h1>Cab Booking System</h1>
+<form onsubmit="event.preventDefault(); bookCab()">
+    <label for="email">Email:</label>
+    <input type="email" id="email" required><br><br>
+
+    <label for="source">Source:</label>
+    <input type="text" id="source" required><br><br>
+
+    <label for="destination">Destination:</label>
+    <input type="text" id="destination" required><br><br>
+
+    <label for="cab">Select a cab:</label>
+    <select id="cab" required>
+        <option value="1">Cab 1</option>
+        <option value="2">Cab 2</option>
+        <option value="3">Cab 3</option>
+        <option value="4">Cab 4</option>
+        <option value="5">Cab 5</option>
+    </select><br><br>
+
+    <label for="start-time">Start Time:</label>
+    <input type="datetime-local" id="start-time" required><br><br>
+
+    <label for="end-time">End Time:</label>
+    <input type="datetime-local" id="end-time" required><br><br>
+
+    <button type="submit">Book Cab</button>
+</form>
+
+<div id="result"></div>
+
+<div id="cabList">
+    <h2>Cab List</h2>
+    <table>
+        <tr>
+            <th>Cab</th>
+            <th>Price/minute</th>
+            <th>Action</th>
+        </tr>
+        <tr>
+            <td>Cab 1</td>
+            <td><input type="number" id="price1" value="1.5"></td>
+            <td><button onclick="updateCabPrice(1)">Update</button></td>
+        </tr>
+        <tr>
+            <td>Cab 2</td>
+            <td><input type="number" id="price2" value="1.8"></td>
+            <td><button onclick="updateCabPrice(2)">Update</button></td>
+        </tr>
+        <tr>
+            <td>Cab 3</td>
+            <td><input type="number" id="price3" value="2.0"></td>
+            <td><button onclick="updateCabPrice(3)">Update</button></td>
+        </tr>
+        <tr>
+            <td>Cab 4</td>
+            <td><input type="number" id="price4" value="2.2"></td>
+            <td><button onclick="updateCabPrice(4)">Update</button></td>
+        </tr>
+        <tr>
+            <td>Cab 5</td>
+            <td><input type="number" id="price5" value="2.5"></td>
+            <td><button onclick="updateCabPrice(5)">Update</button></td>
+        </tr>
+    </table>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
